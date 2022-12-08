@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Core", "Spyder.Core\Spyder.Core.csproj", "{0D52E131-974E-4C67-AF06-1CA7FE682DFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Console", "Spyder.Console\Spyder.Console.csproj", "{D6FC55B1-F682-465B-8CFF-67BFACDDE93E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{A3ABC4E4-DDC6-4CB5-99D7-A13C8EB0920D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Expression", "Expression", "{4844DDBF-C092-414A-B271-8A95D772441F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B04DAC88-4747-4CFE-978B-B80E7D0B37F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Types", "Types", "{8E6E2D0E-A569-435B-B592-ECE2D49D2B07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reflection", "Reflection", "{4E418BD7-5D2A-47A1-B676-B29C03558CD6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Logging", "Spyder.Extensions.Logging\Spyder.Extensions.Logging.csproj", "{47E02182-16A7-47E6-887C-C128035033A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Types", "Spyder.Extensions.Types\Spyder.Extensions.Types.csproj", "{09023C20-844F-4A9A-B681-E17DAB4BECB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Reflection", "Spyder.Extensions.Reflection\Spyder.Extensions.Reflection.csproj", "{C799049C-1E96-4F1A-8D28-6BB02469E0C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{A36A69ED-D0F9-4E98-8C25-B72A209972B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Web", "Spyder.Extensions.Web\Spyder.Extensions.Web.csproj", "{959CD528-7A3E-4E92-8332-A723AED8A97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Expression", "Spyder.Extensions.Expression\Spyder.Extensions.Expression.csproj", "{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Task", "Spyder.Extensions.Task\Spyder.Extensions.Task.csproj", "{37F18FB7-2392-4E37-A31C-CE056B9D9A93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D52E131-974E-4C67-AF06-1CA7FE682DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D52E131-974E-4C67-AF06-1CA7FE682DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D52E131-974E-4C67-AF06-1CA7FE682DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D52E131-974E-4C67-AF06-1CA7FE682DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FC55B1-F682-465B-8CFF-67BFACDDE93E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FC55B1-F682-465B-8CFF-67BFACDDE93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FC55B1-F682-465B-8CFF-67BFACDDE93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FC55B1-F682-465B-8CFF-67BFACDDE93E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E02182-16A7-47E6-887C-C128035033A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E02182-16A7-47E6-887C-C128035033A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E02182-16A7-47E6-887C-C128035033A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E02182-16A7-47E6-887C-C128035033A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09023C20-844F-4A9A-B681-E17DAB4BECB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09023C20-844F-4A9A-B681-E17DAB4BECB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09023C20-844F-4A9A-B681-E17DAB4BECB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09023C20-844F-4A9A-B681-E17DAB4BECB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C799049C-1E96-4F1A-8D28-6BB02469E0C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C799049C-1E96-4F1A-8D28-6BB02469E0C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C799049C-1E96-4F1A-8D28-6BB02469E0C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C799049C-1E96-4F1A-8D28-6BB02469E0C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{959CD528-7A3E-4E92-8332-A723AED8A97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959CD528-7A3E-4E92-8332-A723AED8A97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959CD528-7A3E-4E92-8332-A723AED8A97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959CD528-7A3E-4E92-8332-A723AED8A97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47E02182-16A7-47E6-887C-C128035033A2} = {A3ABC4E4-DDC6-4CB5-99D7-A13C8EB0920D}
+		{09023C20-844F-4A9A-B681-E17DAB4BECB3} = {8E6E2D0E-A569-435B-B592-ECE2D49D2B07}
+		{C799049C-1E96-4F1A-8D28-6BB02469E0C8} = {4E418BD7-5D2A-47A1-B676-B29C03558CD6}
+		{959CD528-7A3E-4E92-8332-A723AED8A97B} = {B04DAC88-4747-4CFE-978B-B80E7D0B37F1}
+		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09} = {4844DDBF-C092-414A-B271-8A95D772441F}
+		{37F18FB7-2392-4E37-A31C-CE056B9D9A93} = {A36A69ED-D0F9-4E98-8C25-B72A209972B6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9C971F5-C2D5-4EFC-812D-1E05D7C866A3}
+	EndGlobalSection
+EndGlobal
