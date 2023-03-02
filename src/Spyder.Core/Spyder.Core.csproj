@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fabric_Jeffery" Version="1.4.3" />
+    <PackageReference Include="Fabric_Jeffery" Version="2.0.0" />
     <PackageReference Include="LibSassHost" Version="1.3.3" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="SharpScss" Version="2.0.0" />
   </ItemGroup>
 

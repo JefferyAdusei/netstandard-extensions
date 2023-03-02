@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Spyder.Extensions.Logging.File
+﻿namespace Spyder.Extensions.Logging.File
 {
+    using Microsoft.Extensions.Logging;
+    using Spyder.Extensions.Logging.Models;
     using System;
     using System.IO;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.Logging;
-    using Async;
-    using System.Threading;
 
     /// <inheritdoc />
     /// <summary>
