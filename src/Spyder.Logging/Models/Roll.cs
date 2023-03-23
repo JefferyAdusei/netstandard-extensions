@@ -1,4 +1,4 @@
-﻿namespace Spyder.Extensions.Logging.Models
+﻿namespace Spyder.Logging.Models
 {
     public enum Roll
     {

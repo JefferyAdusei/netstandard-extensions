@@ -1,10 +1,10 @@
-﻿namespace Spyder.Extensions.Logging.Extensions
-{
-    using Spyder.Extensions.Logging.Models;
-    using System;
-    using System.IO;
-    using System.Runtime.InteropServices;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using Spyder.Logging.Models;
 
+namespace Spyder.Logging.Extensions
+{
     internal static class PathExtensions
     {
         /// <summary>
@@ -12,7 +12,7 @@
         /// </summary>
         /// <param name="path">The path to normalize</param>
         /// <returns>The normalized path</returns>
-        public static string NormalizePath(this string path) => RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+        public static string? NormalizePath(this string path) => RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
             ? path?.Replace('/', '\\').Trim()
             : path?.Replace('\\', '/').Trim();
 
@@ -21,7 +21,7 @@
         /// </summary>
         /// <param name="path">The path to resolve</param>
         /// <returns>The resolved path</returns>
-        public static string ResolvePath(this string path) => Path.GetFullPath(path);
+        public static string ResolvePath(this string? path) => Path.GetFullPath(path!);
 
         /// <summary>
         /// Generates a file name for logs depending on the user's roll over choice

@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Reflectio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{A36A69ED-D0F9-4E98-8C25-B72A209972B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Web", "Spyder.Extensions.Web\Spyder.Extensions.Web.csproj", "{959CD528-7A3E-4E92-8332-A723AED8A97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Web", "Spyder.Extensions.Web\Spyder.Extensions.Web.csproj", "{959CD528-7A3E-4E92-8332-A723AED8A97B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Expression", "Spyder.Extensions.Expression\Spyder.Extensions.Expression.csproj", "{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Expression", "Spyder.Extensions.Expression\Spyder.Extensions.Expression.csproj", "{349258F2-3A65-4D4C-84BD-CD68FD4EAB09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Extensions.Task", "Spyder.Extensions.Task\Spyder.Extensions.Task.csproj", "{37F18FB7-2392-4E37-A31C-CE056B9D9A93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyder.Extensions.Task", "Spyder.Extensions.Task\Spyder.Extensions.Task.csproj", "{37F18FB7-2392-4E37-A31C-CE056B9D9A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spyder.Logging", "Spyder.Logging\Spyder.Logging.csproj", "{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F18FB7-2392-4E37-A31C-CE056B9D9A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{959CD528-7A3E-4E92-8332-A723AED8A97B} = {B04DAC88-4747-4CFE-978B-B80E7D0B37F1}
 		{349258F2-3A65-4D4C-84BD-CD68FD4EAB09} = {4844DDBF-C092-414A-B271-8A95D772441F}
 		{37F18FB7-2392-4E37-A31C-CE056B9D9A93} = {A36A69ED-D0F9-4E98-8C25-B72A209972B6}
+		{AF5FF17F-C6C4-472D-96F6-2E7CD60D785C} = {A3ABC4E4-DDC6-4CB5-99D7-A13C8EB0920D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9C971F5-C2D5-4EFC-812D-1E05D7C866A3}

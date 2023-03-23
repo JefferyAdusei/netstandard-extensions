@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using Spyder.Extensions.Logging.Extensions;
+using Spyder.Logging.Extensions;
 
-namespace Spyder.Extensions.Logging.Models
+namespace Spyder.Logging.Models
 {
     public class Configurator
     {

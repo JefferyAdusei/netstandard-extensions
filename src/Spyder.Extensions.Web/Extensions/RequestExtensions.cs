@@ -9,6 +9,9 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Microsoft.Extensions.Logging;
+using Spyder.Extensions.Logging;
+using Spyder.Extensions.Web.Logging;
 
 namespace Spyder.Extensions.Web.Extensions
 {
@@ -21,6 +24,8 @@ namespace Spyder.Extensions.Web.Extensions
         /// </summary>
         private static readonly JsonSerializerOptions SerializerOptions =
             new(JsonSerializerDefaults.Web);
+
+        private static ILogger? _logger;
 
         #endregion
 
@@ -67,7 +72,7 @@ namespace Spyder.Extensions.Web.Extensions
             catch (HttpRequestException exception)
             {
                 // Log the exception if we have a logger
-                FabricDi.Logger?.LogErrorSource(exception.Message);
+                _logger?.LogErrorSource(exception.Message);
 
                 // Otherwise, we don't have any information to be able to return
                 throw;
@@ -104,7 +109,7 @@ namespace Spyder.Extensions.Web.Extensions
             catch (Exception exception)
             {
                 // Log the exception
-                FabricDi.Logger?.LogErrorSource(exception.Source, exception: exception);
+                StaticLogger.Get()?.LogErrorSource(exception.Source, exception: exception);
 
                 // If we got unexpected error, return that
                 return new WebResponse<TResponse>
@@ -275,7 +280,7 @@ namespace Spyder.Extensions.Web.Extensions
             catch (HttpRequestException exception)
             {
                 // Log exception
-                FabricDi.Logger?.LogErrorSource(exception.Message, exception: exception);
+                StaticLogger.Get()?.LogErrorSource(exception.Message, exception: exception);
 
                 // If there is no information, throw an exception
                 return new HttpResponseMessage(HttpStatusCode.UnsupportedMediaType);
@@ -283,14 +288,14 @@ namespace Spyder.Extensions.Web.Extensions
             catch (ArgumentNullException exception)
             {
                 // Log exception
-                FabricDi.Logger?.LogErrorSource(exception.Message, exception: exception);
+                StaticLogger.Get()?.LogErrorSource(exception.Message, exception: exception);
 
                 return new HttpResponseMessage(HttpStatusCode.PreconditionFailed);
             }
             catch (InvalidOperationException exception)
             {
                 // Log exception
-                FabricDi.Logger?.LogErrorSource(exception.Message, exception: exception);
+                StaticLogger.Get()?.LogErrorSource(exception.Message, exception: exception);
 
                 return new HttpResponseMessage(HttpStatusCode.PreconditionRequired);
             }
@@ -329,7 +334,7 @@ namespace Spyder.Extensions.Web.Extensions
             catch (Exception exception)
             {
                 // Log the exception
-                FabricDi.Logger?.LogErrorSource(exception.Source, exception: exception);
+                StaticLogger.Get()?.LogErrorSource(exception.Source, exception: exception);
 
                 // If we got unexpected error, return that
                 return new WebResponse<TResponse>
@@ -415,7 +420,7 @@ namespace Spyder.Extensions.Web.Extensions
             catch (JsonException exception)
             {
                 // Log the error.
-                FabricDi.Logger.LogErrorSource($"An error occurred while deserializing{nameof(TResponse)}", exception: exception);
+                StaticLogger.Get()?.LogErrorSource($"An error occurred while deserializing{nameof(TResponse)}", exception: exception);
 
                 // If deserializing JSON failed, then set JSON Exception
                 result.ErrorMessage = exception.Message;

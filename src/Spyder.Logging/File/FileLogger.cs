@@ -1,11 +1,12 @@
-﻿namespace Spyder.Extensions.Logging.File
-{
-    using Microsoft.Extensions.Logging;
-    using Spyder.Extensions.Logging.Models;
-    using System;
-    using System.IO;
-    using System.Threading.Tasks;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Spyder.Extensions.Task.Locks;
+using Spyder.Logging.Models;
 
+namespace Spyder.Logging.File
+{
     /// <inheritdoc />
     /// <summary>
     /// A logger that writes logs as normal text to file
@@ -35,7 +36,7 @@
         public FileLogger(Configurator configuration)
         {
             // Set members
-            _directory = Path.GetDirectoryName(configuration.FilePath);
+            _directory = Path.GetDirectoryName(configuration.FilePath )!;
             _configuration = configuration;
         }
 
@@ -61,7 +62,7 @@
         /// <param name="state">The details of the message</param>
         /// <param name="exception">Any exception to add to the log</param>
         /// <param name="formatter">The formatter for converting the state and exception to a message string</param>
-        public async void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+        public async void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception, string> formatter)
         {
             // If we should not log...
             if (!IsEnabled(logLevel))
@@ -80,7 +81,7 @@
 
                 // Open the file
                 await using StreamWriter fileStream =
-                    new(File.Open(_configuration.FilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite,
+                    new(System.IO.File.Open(_configuration.FilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite,
                                                FileShare.ReadWrite));
                 fileStream.BaseStream.Seek(0, SeekOrigin.End);
 
@@ -100,7 +101,7 @@
 
         /// <inheritdoc />
         /// File loggers are not scoped so this is always null
-        public IDisposable BeginScope<TState>(TState state)
+        public IDisposable? BeginScope<TState>(TState state)
         {
             return null;
         }
