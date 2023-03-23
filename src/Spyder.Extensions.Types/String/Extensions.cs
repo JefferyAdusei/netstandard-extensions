@@ -200,7 +200,7 @@
         }
 
         /// <summary>
-        /// Convert string to HTML format (Replacing \n with equivelent HTML Tag)
+        /// Convert string to HTML format (Replacing \n with equivalent HTML Tag)
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
